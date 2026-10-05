@@ -2,9 +2,12 @@ package com.salesianos.dto_tarea.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 // @Entity --> No necesitamos que sea entidad pues no es una api rest, es para pruebas
+// por ende, tampoco necesitamos hacer respos y services para este sample
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -15,10 +18,11 @@ public class Alumno {
     private String nombre;
     private String apellido1;
     private String apellido2;
-    private int telefono;
     private String email;
-    private String direccion; // Cambiar por las dos clases propias
-    private String curso;
+
+    @Builder.Default // Testear en conjunto con las validacinoes
+    private Direccion direccion;
+    private Curso curso;
 
 
 }
