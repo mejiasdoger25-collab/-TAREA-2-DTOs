@@ -6,7 +6,7 @@ import jakarta.annotation.PostConstruct;
 
 public class ManinDeMentira {
 
-    // Testing area
+    // "Testing area al ser fake, no api rest, no entidades, etc"
 
     @PostConstruct
     static void main() {
@@ -16,15 +16,34 @@ public class ManinDeMentira {
                 .nombre("Pepe")
                 .apellido1("García")
                 .apellido2("López")
+                .telefono(123123123)
                 .email("testing@test.com")
+                .direccion(direccion)
+                .curso(curso)
                 .build();
 
 
         Curso c1 = new Curso.builder()
-                .id(1L),
-                .nombre(nombre),
-        .tipo
+                .id(1L)
+                .nombre("2º Dam")
+                .tipo("Presencial")
+                .tutor("Luis Miguel López Magaña")
+                .aula("203")
+                .build();
 
+
+        Direccion d1 = Direccion.builder()
+                .tipoVia("Calle")
+                .linea1("Calle Mayor 15")
+                .linea2("2º A")
+                .cp("41001")
+                .poblacion("Sevilla")
+                .provincia("Sevilla")
+                .build();
     }
+
+    // Testing salida datos
+    AlumnoDTO alumnoDTO = AlumnoDTO.of(alumno);
+    System.out.println(alumnoDTO);
 
 }

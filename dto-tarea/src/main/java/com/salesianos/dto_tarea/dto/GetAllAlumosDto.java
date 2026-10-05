@@ -1,4 +1,4 @@
-package com.salesianos.dto_tarea.dto;
+/*package com.salesianos.dto_tarea.dto;
 
 import com.salesianos.dto_tarea.model.Alumno;
 import com.salesianos.dto_tarea.model.Curso;
@@ -14,4 +14,4 @@ public record GetAllAlumosDto(
     public static GetAllAlumosDto of(Alumno a, Curso c) {
         return new GetAllAlumosDto(a.getId(), a.getNombre(), a.getEmail());
     }
-}
+}*/
